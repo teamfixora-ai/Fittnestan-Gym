@@ -2,6 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Prevent "Cannot set property fetch of #<Window> which has only a getter" errors in sandboxed iframe environments
+      try {
+        const originalFetch = window.fetch;
+        if (originalFetch) {
+          let currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get() {
+              return currentFetch;
+            },
+            set(val) {
+              currentFetch = val;
+            }
+          });
+        }
+      } catch (e) {
+        console.warn("Unable to define configurable fetch property:", e);
+      }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fitnesstaan Gym | Shah Faisal Colony, Karachi</title>
   </head>
