@@ -1,0 +1,6 @@
+{
+  "name": "Fitnesstaan Gym",
+  "description": "Premium cinematic website for Fitnesstaan Gym located in Shah Faisal Colony, Karachi, Pakistan. Built with high-performance animations, BMI calculators, custom plans, and dark luxury palettes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
